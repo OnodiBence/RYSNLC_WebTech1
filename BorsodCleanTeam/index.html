@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <title>Borsod Clean Team</title>
+  </head>
+  <body>
+    <nav class="relative container mx-auto p-6 text-darkBlue">
+      <!-- Flex container -->
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div id="logo" class="w-24 h-24 pt-2 md:w-10 md:h-10 lg:mb-4 sm:w-20 sm:h-20 md:mb-4 xl:w-24 xl:h-24 cursor-pointer">
+          <img src="./logo.jpeg" alt="" />
+        </div>
+        <!-- Menu Items -->
+        <div class="hidden space-x-6 md:flex xl:text-2xl">
+          <a onclick="refresh()" class="hover:bg-lightBlue py-2 px-4 md:px-1">Főoldal</a>
+          <a href="#services" class="hover:bg-lightBlue py-2 px-4 md:px-1">Szolgáltatások</a>
+          <a href="#aboutUs" class="hover:bg-lightBlue py-2 px-4 md:px-1">Rólunk</a>
+          <a href="#reference" class="hover:bg-lightBlue py-2 px-4 md:px-1">Referencia</a>
+          <a href="#contact" class="hover:bg-lightBlue py-2 px-4 md:px-1">Kapcsolat</a>
+          <a href="#" class="fa fa-facebook-square mt-1 py-2 px-4 md:px-1"></a>
+          <a href="tel:+36 70 575 64 59" class="fa fa-phone py-2 px-2 mt-1 md:px-1"></a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none sm:mt-6"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute flex-col items-center hidden self-end py-8 mt-6 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+        >
+            <a id="fooldal" onclick="refresh()" class="hover:bg-lightBlue py-2 px-6">Főoldal</a>
+            <a id="szolg" href="#services" class="hover:bg-lightBlue py-2 px-6">Szolgáltatások</a>
+            <a id="rolunk" href="#aboutUs" class="hover:bg-lightBlue py-2 px-6">Rólunk</a>
+            <a id="ref" href="#reference" class="hover:bg-lightBlue py-2 px-6">Referencia</a>
+            <a id="kapcs" href="#contact" class="hover:bg-lightBlue py-2 px-6">Kapcsolat</a>
+            <a id="fb"href="#" class="fa fa-facebook-square mt-1 py-2 px-6"></a>
+            <a id="tel"href="tel:+36 70 575 64 59" class="fa fa-phone py-2 px-2 mt-1"></a>
+        </div>
+      </div>
+    </nav>
+
+     <!-- Hero Section -->
+     <section id="home">
+      <div class="container px-6 py-6 mx-auto mb-12 md:mb-36 lg:mb-36 xl:44">
+        <div class="items-center lg:flex">
+            <div class="w-full lg:w-1/2 xl:mb-12">
+                <div class="lg:max-w-lg">
+                    <h1 class="text-xl text-darkBlue font-semibold uppercase text-center md:text-center lg:text-3xl lg:text-left xl:text-left xl:text-5xl">Válassza vállalkozásunkat a kifogástalan tisztaságért</h1>
+                    
+                    <p class="mt-4 mb-6 text-darkBlue text-xl text-center sm:mt-2 md:mt-2 md:text-center lg:text-left xl:text-left xl:text-3xl">Gyors és szakszerű feladatvégzés<br>Takarítás a lakosság - és cégek részére</p>
+                    <div class="w-full text-center lg:text-left xl:text-left">
+                      <a href="#contact" class="px-8 py-2.5 mt-6 text-darkBlue uppercase transition-colors duration-200 transform bg-lightBlue rounded-md lg:w-auto hover:bg-darkBlue cursor-pointer hover:text-lightBlue focus:outline-none focus:bg-darkBlue xl:text-2xl">Kérje ingyenes visszahívásunkat</a>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
+                <img class="w-full h-full lg:max-w-2xl xl:max-w-xl md:max-w-xl" src="./main.jpg" alt="">
+            </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-darkBlue">
+      <div class="container px-6 py-4 mx-auto">
+          <h1 class="text-3xl font-semibold text-center capitalize lg:text-4xl text-white mt-12">Szolgáltatásaink</h1>
+
+          <div class="flex justify-center mx-auto my-6">
+            <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+            <span class="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"></span>
+            <span class="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
+        </div>
+
+          <div class="flex items-center justify-center mb-8">
+            <div class="flex items-center p-1 border border-lightBlue rounded-xl">
+              <div>
+                <button id="companyBtn" class="active nav-link btn px-4 py-2 text-1xl text-white font-medium hover:bg-blue-500 hover:text-white rounded-xl md:px-12">Cégek, üzletek részére</button>
+              </div>
+              <div>
+                <button id="personalBtn" class="nav-link text-white btn px-4 py-2 text-1xl font-medium hover:bg-blue-500 hover:text-white rounded-xl md:px-12">Magánszemélyek részére</button>
+              </div>
+            </div>
+          </div>
+
+  
+          <div id="company" class="grid grid-cols-1 gap-10 sm:mt-6 xl:mt-12 md:grid-cols-2 xl:grid-cols-4 mb-12">
+
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">irodák rendben tartása</h>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">közös helyiségek takarítása</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">mellékhelyiségek/<br>szaniterek takarítása</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">raktár takarítás</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-8 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">ablak tisztítás</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-8 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">lépcsőházi takarítás</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-8 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">épület környéki takarítás</h1>
+            </div>
+
+          </div>
+
+          <div id="personal" class="grid grid-cols-1 gap-10 sm:mt-6 xl:mt-12 md:grid-cols-2 xl:grid-cols-4 mb-12 hidden">
+
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">szobák takarítása</h>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">teljeskörű fürdőszoba takarítás</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">konyhák tisztítása/<br>szaniterek takarítása</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">terasz/udvar rendberakása</h1>
+            </div>
+            <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-500 dark:border-gray-700 dark:hover:border-transparent">  
+              <h1 class="my-5 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center group-hover:text-white">komplett nagytakarítás</h1>
+            </div>
+
+          </div>
+      </div>
+    </section>
+
+      <!-- About us Section -->
+    <section id="aboutUs">
+
+      <h1 class="text-3xl font-semibold text-center text-darkBlue capitalize lg:text-4xl mt-12">Rólunk</h1>
+
+      <div class="flex justify-center mx-auto my-6">
+        <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+        <span class="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"></span>
+        <span class="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
+      </div>
+
+      <div class="w-full">
+        <h2 class="text-xl text-darkBlue font-semibold uppercase text-center md:text-center lg:text-center lg:text-3xl xl:text-3xl">Csapatunkat választhatja kisebb és nagyobb megbízásorka</h2>
+        <h2 class="mt-4 text-darkBlue text-xl text-center sm:mt-2 md:mt-2 md:text-center lg:text-center xl:text-3xl">Fix, előre egyeztetett díjjal vagy órabérben, állandó emberrel vagy nagyobb takarítás esetén csapattal is tudunk dolgozni</h2>
+        <h2 class="mb-6 text-darkBlue text-xl text-center sm:mt-2 md:mt-2 md:text-center lg:text-center xl:text-3xl">Üzlethelyiségeknek ,irodáknak,rendelőknek, lépcsőházaknak bátran állunk rendelkezésre!</h2>
+      </div>
+
+      <div class="w-max:md flex justify-center">
+        <img src="ss.png"alt="">
+      </div>
+
+      <div class="mt-12 border-b-4 mx-32">
+
+      </div>
+
+    </section>
+
+<section id="reference" class="">
+      <div class="container px-6 mx-auto">
+          <h1 class="text-3xl font-semibold text-center text-darkBlue capitalize lg:text-4xl mt-12">Referenciáink</h1>
+    
+          <div class="flex justify-center mx-auto my-6">
+            <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+            <span class="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"></span>
+            <span class="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
+          </div>
+      </div>
+</section>
+
+<section>
+  <div id="fullscrVer" class="">
+    <!-- Slider main container -->
+    <div class="swiper lg:w-3/4 xl:w-3/4 mt-8">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="redony2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="csap2.jpg" alt=""></div>
+        
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+  </div>
+
+  <!-- mobile version -->
+  <div id="mobileVer" class="grid grid-cols-1 gap-10 sm:mt-4md:grid-cols-2">
+
+    <div class="flex flex-col bg-white justify-center items-center">  
+      <img src="redony2.jpg" alt="">
+    </div>
+    <div class="flex flex-col bg-white justify-center items-center">  
+      <img src="csap2.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="mt-12">
+  <div class="container px-6 py-4 mx-auto">
+      <h1 class="text-3xl font-semibold text-center text-darkBlue capitalize lg:text-4xl">Cégek, amelyek munkáinkkal elégedettek voltak</h1>
+
+      <div class="flex justify-center mx-auto my-6">
+        <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+        <span class="inline-block w-3 h-1 mx-1 bg-blue-500 rounded-full"></span>
+        <span class="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
+    </div>
+
+      <div id="company" class="grid grid-cols-1 gap-10 sm:mt-4 xl:mt-12 md:grid-cols-2 xl:grid-cols-5">
+
+        <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform rounded-xl group">  
+          <h1 class="my-3 mx-3 text-2xl font-semibold text-darkBlue text-center">BP Plan Kft.<br>(aklimas.hu)</h1>
+        </div>
+        <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform rounded-xl group">  
+          <h1 class="my-3 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center">Oleander Informatikai Kft.</h1>
+        </div>
+        <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform rounded-xl group">  
+          <h1 class="my-3 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center">Happy IMP Kft.</h1>
+        </div>
+        <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform rounded-xl group">  
+          <h1 class="my-3 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center">Aitutaki masszázsszalon</h1>
+        </div>
+        <div class="flex flex-col bg-white justify-center items-center transition-colors duration-300 transform rounded-xl group">  
+          <h1 class="my-3 mx-3 text-2xl font-semibold text-darkBlue capitalize text-center">Szeles úti társasház<br>lakóközösség</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+
+<!-- ====== Contact Section Start -->
+<section id="contact" class="relative z-10 overflow-hidden bg-white py-12 lg:py-[60px] text-darkBlue lg:mx-8">
+  <div class="container mx-auto">
+    <div class="-mx-4 flex flex-wrap lg:justify-between">
+      <div class="w-full px-4 lg:w-1/2 xl:w-6/12 md:mt-24 lg:mt-24 xl:mt-24">
+        <div class="mb-12">
+          <span class="text-primary mb-4 block text-base font-semibold ml-3">
+            Kapcsolat
+          </span>
+          <h2
+            class="text-dark mb-6 font-bold uppercase ml-3 "
+          >
+            Lépj kapcsolatba velünk
+          </h2>
+          <p class="text-body-color mb-9 text-base leading-relaxed ml-3">
+            Ha felkeltettük érdeklődésed, és szeretnél velünk kapcsolatba lépni, megteheted
+          </p>
+          <div class="mb-8 flex w-full max-w-[370px]">
+            <div
+              class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]"
+            >
+            <a href="tel:+36 70 575 64 59">
+              <svg
+              width="24"
+              height="26"
+              viewBox="0 0 24 26"
+              class="fill-current"
+            >
+              <path
+                d="M22.6149 15.1386C22.5307 14.1704 21.7308 13.4968 20.7626 13.4968H2.82869C1.86042 13.4968 1.10265 14.2125 0.97636 15.1386L0.092295 23.9793C0.0501967 24.4845 0.21859 25.0317 0.555377 25.4106C0.892163 25.7895 1.39734 26 1.94462 26H21.6887C22.1939 26 22.6991 25.7895 23.078 25.4106C23.4148 25.0317 23.5832 24.5266 23.5411 23.9793L22.6149 15.1386ZM21.9413 24.4424C21.8992 24.4845 21.815 24.5687 21.6466 24.5687H1.94462C1.81833 24.5687 1.69203 24.4845 1.64993 24.4424C1.60783 24.4003 1.52364 24.3161 1.56574 24.1477L2.4498 15.2649C2.4498 15.0544 2.61819 14.9281 2.82869 14.9281H20.8047C21.0152 14.9281 21.1415 15.0544 21.1835 15.2649L22.0676 24.1477C22.0255 24.274 21.9834 24.4003 21.9413 24.4424Z"
+              />
+              <path
+                d="M11.7965 16.7805C10.1547 16.7805 8.84961 18.0855 8.84961 19.7273C8.84961 21.3692 10.1547 22.6742 11.7965 22.6742C13.4383 22.6742 14.7434 21.3692 14.7434 19.7273C14.7434 18.0855 13.4383 16.7805 11.7965 16.7805ZM11.7965 21.2008C10.9966 21.2008 10.3231 20.5272 10.3231 19.7273C10.3231 18.9275 10.9966 18.2539 11.7965 18.2539C12.5964 18.2539 13.2699 18.9275 13.2699 19.7273C13.2699 20.5272 12.5964 21.2008 11.7965 21.2008Z"
+              />
+              <path
+                d="M1.10265 7.85562C1.18684 9.70794 2.82868 10.4657 3.67064 10.4657H6.61752C6.65962 10.4657 6.65962 10.4657 6.65962 10.4657C7.92257 10.3815 9.18552 9.53955 9.18552 7.85562V6.84526C10.5748 6.84526 13.7742 6.84526 15.1635 6.84526V7.85562C15.1635 9.53955 16.4264 10.3815 17.6894 10.4657H17.7315H20.6363C21.4782 10.4657 23.1201 9.70794 23.2043 7.85562C23.2043 7.72932 23.2043 7.26624 23.2043 6.84526C23.2043 6.50847 23.2043 6.21378 23.2043 6.17169C23.2043 6.12959 23.2043 6.08749 23.2043 6.08749C23.078 4.90874 22.657 3.94047 21.9413 3.18271L21.8992 3.14061C20.8468 2.17235 19.5838 1.62507 18.6155 1.28828C15.795 0.193726 12.2587 0.193726 12.0903 0.193726C9.6065 0.235824 8.00677 0.446315 5.60716 1.28828C4.681 1.58297 3.41805 2.13025 2.36559 3.09851L2.3235 3.14061C1.60782 3.89838 1.18684 4.86664 1.06055 6.04539C1.06055 6.08749 1.06055 6.12959 1.06055 6.12959C1.06055 6.21378 1.06055 6.46637 1.06055 6.80316C1.10265 7.18204 1.10265 7.68722 1.10265 7.85562ZM3.37595 4.15097C4.21792 3.3932 5.27038 2.93012 6.15444 2.59333C8.34355 1.79346 9.7749 1.62507 12.1745 1.58297C12.3429 1.58297 15.6266 1.62507 18.1525 2.59333C19.0365 2.93012 20.089 3.3511 20.931 4.15097C21.394 4.65615 21.6887 5.32972 21.7729 6.12959C21.7729 6.25588 21.7729 6.46637 21.7729 6.80316C21.7729 7.22414 21.7729 7.68722 21.7729 7.81352C21.7308 8.78178 20.8047 8.99227 20.6784 8.99227H17.7736C17.3526 8.95017 16.679 8.78178 16.679 7.85562V6.12959C16.679 5.7928 16.4685 5.54021 16.1738 5.41392C15.9213 5.32972 8.55405 5.32972 8.30146 5.41392C8.00677 5.49811 7.79628 5.7928 7.79628 6.12959V7.85562C7.79628 8.78178 7.1227 8.95017 6.70172 8.99227H3.79694C3.67064 8.99227 2.74448 8.78178 2.70238 7.81352C2.70238 7.68722 2.70238 7.22414 2.70238 6.80316C2.70238 6.46637 2.70238 6.29798 2.70238 6.17169C2.61818 5.32972 2.91287 4.65615 3.37595 4.15097Z"
+              />
+            </svg>
+            </a>
+            </div>
+            <div class="w-full">
+              <a href="tel:+36 70 575 64 59">
+                <h4 class="text-dark mb-1 text-xl font-bold">Mobiltelefon szám</h4>
+                <p class="text-body-color text-base">(+36) 70 555 5555</p>
+              </a>
+            </div>
+          </div>
+          <div class="mb-8 flex w-full max-w-[370px]">
+            <a href="emailemail@gmail.com">
+              
+            </a>
+            <div
+              class="bg-primary text-primary mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-opacity-5 sm:h-[70px] sm:max-w-[70px]"
+            >
+              <svg
+                width="28"
+                height="19"
+                viewBox="0 0 28 19"
+                class="fill-current"
+              >
+                <path
+                  d="M25.3636 0H2.63636C1.18182 0 0 1.16785 0 2.6052V16.3948C0 17.8322 1.18182 19 2.63636 19H25.3636C26.8182 19 28 17.8322 28 16.3948V2.6052C28 1.16785 26.8182 0 25.3636 0ZM25.3636 1.5721C25.5909 1.5721 25.7727 1.61702 25.9545 1.75177L14.6364 8.53428C14.2273 8.75886 13.7727 8.75886 13.3636 8.53428L2.04545 1.75177C2.22727 1.66194 2.40909 1.5721 2.63636 1.5721H25.3636ZM25.3636 17.383H2.63636C2.09091 17.383 1.59091 16.9338 1.59091 16.3499V3.32388L12.5 9.8818C12.9545 10.1513 13.4545 10.2861 13.9545 10.2861C14.4545 10.2861 14.9545 10.1513 15.4091 9.8818L26.3182 3.32388V16.3499C26.4091 16.9338 25.9091 17.383 25.3636 17.383Z"
+                />
+              </svg>
+            </div>
+            <div class="w-full">
+                <h4 class="text-dark mb-1 text-xl font-bold">Email Cím</h4>
+                <p class="text-body-color text-base">info@email.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full px-16 lg:w-1/2 xl:w-5/12">
+        <div class="relative rounded-lg bg-white p-8 shadow-lg sm:p-4">
+          <form>
+            <div class="mb-6">
+              <input
+                type="text"
+                placeholder="Teljes név"
+                class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+              />
+            </div>
+            <div class="mb-6">
+              <input
+                type="text"
+                placeholder="Helyszín"
+                class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+              />
+            </div>
+            <div class="mb-6">
+              <input
+                type="email"
+                placeholder="Email cím"
+                class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+              />
+            </div>
+            <div class="mb-6">
+              <input
+                type="text"
+                placeholder="Telefonszám"
+                class="text-body-color border-[f0f0f0] focus:border-primary w-full rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+              />
+            </div>
+            <div class="mb-6">
+              <textarea
+                rows="6"
+                placeholder="Üzenet"
+                class="text-body-color border-[f0f0f0] focus:border-primary w-full resize-none rounded border py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="bg-primary border-primary w-1/2 rounded border font-bold p-3 text-white bg-blue-500 transition hover:bg-opacity-40 hover:text-darkBlue"
+              >
+                Küldés
+              </button>
+            </div>
+          </form>
+          <div>
+            <span class="absolute -top-10 -right-9 z-[-1]">
+              <svg
+                width="100"
+                height="100"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
+                  fill="#3056D3"
+                />
+              </svg>
+            </span>
+            <span class="absolute -right-10 top-[90px] z-[-1]">
+              <svg
+                width="34"
+                height="134"
+                viewBox="0 0 34 134"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="31.9993"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 1.66665)"
+                  fill="#13C296"
+                />
+              </svg>
+            </span>
+            <span class="absolute -left-7 -bottom-7 z-[-1]">
+              <svg
+                width="107"
+                height="134"
+                viewBox="0 0 107 134"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="104.999"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 104.999 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 104.999 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 104.999 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 104.999 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 104.999 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 104.999 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 104.999 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 104.999 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 104.999 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="104.999"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 104.999 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="90.3333"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 90.3333 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="75.6654"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 75.6654 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="31.9993"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 31.9993 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="60.9993"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 60.9993 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="17.3333"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 17.3333 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="132"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 132)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="117.333"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 117.333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="102.667"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 102.667)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="88"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 88)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="73.3333"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 73.3333)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="45"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 45)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="16"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 16)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="59"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 59)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="30.6666"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 30.6666)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="46.3333"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 46.3333 1.66665)"
+                  fill="#13C296"
+                />
+                <circle
+                  cx="2.66536"
+                  cy="1.66665"
+                  r="1.66667"
+                  transform="rotate(180 2.66536 1.66665)"
+                  fill="#13C296"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== Contact Section End -->
+  
+<!-- Footer Section -->
+<footer class="flex flex-col items-center justify-between p-6 bg-white dark:bg-gray-900 sm:flex-row mt-12">
+  <a href="#" class="text-xl font-bold text-gray-600 transition-colors duration-300 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 mb-2">
+    Borsod Clean Team</a>
+
+  <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">© Copyright 2022. All Rights Reserved.</p>
+
+      <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+              </path>
+          </svg>
+      </a>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
